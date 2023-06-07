@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "basic-turbo",
+  "description": "A clonable template for boostrapping a Turborepo with a GraphQL server and Next.js app.",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "format": "turbo run format",
+    "lint": "turbo run lint",
+    "prepush": "turbo run prepush",
+    "test": "turbo run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminkimball/basic-turbo.git"
+  },
+  "author": "Benjamin Kimball <hello@benjaminkimball.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/benjaminkimball/basic-turbo/issues"
+  },
+  "homepage": "https://github.com/benjaminkimball/basic-turbo#readme",
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "volta": {
+    "node": "18.16.0",
+    "npm": "9.6.7"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.9.3"
+  }
+}
