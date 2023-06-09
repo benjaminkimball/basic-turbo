@@ -2,6 +2,10 @@
 
 A clonable template for boostrapping a Turborepo with a GraphQL server and Next.js app.
 
+### Developer `make` commands
+
+- `setup` &mdash; Installs dependencies and copies dotfiles
+
 ### Main `make` commands
 
 - `start` &mdash; Starts all services
