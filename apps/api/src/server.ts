@@ -27,7 +27,7 @@ export async function createHttpServer(): Promise<Server> {
     "/graphql",
     expressMiddleware(apollo, {
       context: async (ctx) => ({ ...ctx, db: prisma }),
-    })
+    }),
   );
 
   app.use("*", (_req, res) => {
