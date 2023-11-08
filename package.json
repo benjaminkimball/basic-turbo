@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "basic-turbo",
-  "description": "A clonable template for boostrapping a Turborepo with a GraphQL server and Next.js app.",
+  "description": "A cloneable template for bootstrapping a Turborepo with a GraphQL server and Next.js app.",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",

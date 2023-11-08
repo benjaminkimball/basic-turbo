@@ -3,7 +3,7 @@
  * Do not make changes to this file directly
  */
 
-import type * as PrismaClient from ".prisma/client"
+
 import type { Context as ctx } from "./../src/graphql/context"
 import type { core, connectionPluginCore } from "nexus"
 declare global {
@@ -69,7 +69,12 @@ export interface NexusGenObjects {
     startCursor?: string | null; // String
   }
   Query: {};
-  User: PrismaClient.User;
+  User: { // root type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    email?: NexusGenScalars['EmailAddress'] | null; // EmailAddress
+    id?: string | null; // ID
+    updatedAt?: NexusGenScalars['DateTime'] | null; // DateTime
+  }
   UserConnection: { // root type
     edges?: Array<NexusGenRootTypes['UserEdge'] | null> | null; // [UserEdge]
     pageInfo: NexusGenRootTypes['PageInfo']; // PageInfo!
