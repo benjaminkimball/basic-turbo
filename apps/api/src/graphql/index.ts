@@ -1,6 +1,13 @@
 import { ApolloServer, ApolloServerPlugin } from "@apollo/server";
-import { Context } from "./context";
+import { PrismaClient } from "@prisma/client";
+import { IncomingMessage, ServerResponse } from "http";
 import { schema } from "./schema";
+
+export interface Context {
+  db: PrismaClient;
+  req: IncomingMessage;
+  res: ServerResponse;
+}
 
 interface CreateApolloServerArgs {
   plugins?: ApolloServerPlugin[];

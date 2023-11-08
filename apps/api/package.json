@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
     "db:dev": "prisma migrate dev",
     "db:reset": "prisma migrate reset",
     "db:seed": "prisma db seed",
@@ -21,7 +21,7 @@
     "types:graphql": "rimraf generated && ts-node --transpileOnly scripts/generateGraphQLTypes.ts"
   },
   "prisma": {
-    "seed": "ts-node --esm --transpileOnly scripts/seedDatabase.ts"
+    "seed": "ts-node --transpileOnly scripts/seedDatabase.ts"
   },
   "dependencies": {
     "@apollo/server": "^4.7.0",
@@ -37,8 +37,7 @@
     "pino-http": "^8.3.3"
   },
   "devDependencies": {
-    "@ngneat/falso": "^7.1.1",
-    "@tsconfig/node18": "^18.2.2",
+    "@tsconfig/node20": "^20.1.2",
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.1",
     "@types/node": "^20.8.1",
@@ -52,6 +51,7 @@
     "eslint-plugin-security": "^1.7.1",
     "jest": "^29.5.0",
     "nodemon": "^3.0.1",
+    "pino-pretty": "^10.2.3",
     "prettier": "^3.0.3",
     "prisma": "^5.3.1",
     "rimraf": "^5.0.0",

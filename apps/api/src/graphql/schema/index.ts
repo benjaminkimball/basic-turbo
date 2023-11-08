@@ -1,15 +1,14 @@
 import { connectionPlugin, makeSchema } from "nexus";
 import { join } from "path";
-import * as mutations from "./mutations";
-import * as queries from "./queries";
-import * as types from "./types";
+import * as scalars from "./scalars";
+import * as users from "./users";
 
 const rootDir = process.cwd();
 
 export const schema = makeSchema({
-  types: [mutations, queries, types],
+  types: [scalars, users],
   contextType: {
-    module: join(rootDir, "src/graphql/context.ts"),
+    module: join(rootDir, "src/graphql/index.ts"),
     export: "Context",
     alias: "ctx",
   },

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next -p ${WEB_PORT:-3000}",
-    "format": "prettier --write '{app,lib}/**/*'",
+    "format": "prettier --write 'app/**/*'",
     "lint": "next lint && stylelint 'app/**/*.css'",
     "prepush": "npm run types:check && npm run format && npm run lint && npm test",
     "start": "next start -p ${WEB_PORT:-3000}",
