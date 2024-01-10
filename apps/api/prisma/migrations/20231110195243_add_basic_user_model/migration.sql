@@ -5,6 +5,10 @@ CREATE EXTENSION IF NOT EXISTS "citext";
 CREATE TABLE "users" (
     "id" TEXT NOT NULL,
     "email" CITEXT NOT NULL,
+    "hash" TEXT NOT NULL,
+    "salt" TEXT NOT NULL,
+    "given_name" TEXT,
+    "family_name" TEXT,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) NOT NULL,
 

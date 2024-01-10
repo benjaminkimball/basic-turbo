@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "basic-turbo",
+  "name": "vril",
   "description": "A cloneable template for bootstrapping a Turborepo with a GraphQL server and Next.js app.",
   "scripts": {
     "build": "turbo run build",
@@ -12,20 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benjaminkimball/basic-turbo.git"
+    "url": "git+https://github.com/benjaminkimball/vril.git"
   },
   "author": "Benjamin Kimball <hello@benjaminkimball.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/benjaminkimball/basic-turbo/issues"
+    "url": "https://github.com/benjaminkimball/vril/issues"
   },
-  "homepage": "https://github.com/benjaminkimball/basic-turbo#readme",
+  "homepage": "https://github.com/benjaminkimball/vril#readme",
   "engines": {
     "node": "20.x",
     "npm": "10.x"
   },
   "volta": {
-    "node": "20.9.0"
+    "node": "20.11.0",
+    "npm": "10.2.5"
   },
   "workspaces": [
     "apps/*",

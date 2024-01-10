@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo
+source ./bin/signature
 echo "============================================================="
 echo "> Setting up local development environment..."
 echo
@@ -8,8 +8,8 @@ echo
 echo "> Preparing dotenv files..."
 echo
 
-cp ./apps/api/.env.example ./apps/api/.env
-cp ./apps/web/.env.local.example ./apps/web/.env.local
+cp ./apps/api/.env.template ./apps/api/.env
+cp ./apps/web/.env.local.template ./apps/web/.env.local
 
 echo "> Installing dependencies..."
 

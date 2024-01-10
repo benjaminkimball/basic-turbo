@@ -1,35 +1,23 @@
-import { findManyCursorConnection } from "@devoxa/prisma-relay-cursor-connection";
-import { idArg, nonNull, objectType, queryField } from "nexus";
+import { User } from "@prisma/client";
+import { findUserById } from "../../users";
+import { builder } from "../builder";
 
-export const User = objectType({
-  name: "User",
-  definition(t) {
-    t.id("id");
+const UserObject = builder.objectRef<User>("User");
 
-    t.email("email");
-
-    t.datetime("createdAt");
-    t.datetime("updatedAt");
-  },
+UserObject.implement({
+  fields: (t) => ({
+    id: t.exposeID("id"),
+    email: t.field({ type: "Email", resolve: ({ email }) => email }),
+    givenName: t.exposeString("givenName", { nullable: true }),
+    familyName: t.exposeString("familyName", { nullable: true }),
+  }),
 });
 
-export const user = queryField("user", {
-  type: User.name,
-  args: { id: nonNull(idArg()) },
-  resolve(_src, { id }, ctx) {
-    return ctx.db.user.findUnique({ where: { id } });
-  },
-});
-
-export const users = queryField((t) => {
-  t.connectionField("users", {
-    type: User.name,
-    resolve(_root, args, ctx) {
-      return findManyCursorConnection(
-        (args) => ctx.db.user.findMany({ ...args }),
-        () => ctx.db.user.count(),
-        args,
-      );
-    },
-  });
-});
+builder.queryField("user", (t) =>
+  t.field({
+    type: UserObject,
+    args: { id: t.arg.id({ required: true }) },
+    nullable: true,
+    resolve: async (_parent, { id }) => findUserById(id),
+  }),
+);

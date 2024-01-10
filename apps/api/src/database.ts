@@ -7,4 +7,4 @@ export const prisma =
   globalForPrisma.prisma ||
   new PrismaClient({ log: isDev ? ["info", "query", "warn", "error"] : [] });
 
-if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+if (isDev) globalForPrisma.prisma = prisma;

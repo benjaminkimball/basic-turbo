@@ -3,10 +3,6 @@
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
-  modulePathIgnorePatterns: [
-    "<rootDir>/dist/",
-    "<rootDir>/generated/",
-    "<rootDir>/scripts/",
-  ],
+  modulePathIgnorePatterns: ["<rootDir>/dist/"],
 };
 /* eslint-enable no-undef */

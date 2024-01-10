@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+CURRENT_DIR=`basename $(pwd)`
+CONTAINER=`docker ps --filter name="$CURRENT_DIR-redis" --format "{{.Names}}"`
+
+source ./bin/signature
+echo "============================================================"
+echo "> Connecting to $CONTAINER..."
+echo
+
+docker exec -it $CONTAINER redis-cli

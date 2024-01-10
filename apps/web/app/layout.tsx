@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "@basic-turbo/web",
+  title: "@vril/web",
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {

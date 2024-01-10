@@ -1,9 +1,15 @@
 import { PrismaClient } from "@prisma/client";
+import { createUser } from "../src/users";
 
 const prisma = new PrismaClient();
 
 async function seedDatabase() {
-  console.warn("No seeds configured!");
+  const user = await createUser("test@test.com", "Test123!", {
+    givenName: "Bert",
+    familyName: "Sienna",
+  });
+
+  console.info("User created:", user);
 }
 
 seedDatabase()

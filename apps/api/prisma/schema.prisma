@@ -13,12 +13,14 @@ datasource db {
 }
 
 model User {
-  id String @id @default(cuid())
-
-  email String @unique @db.Citext
-
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
+  id         String   @id
+  email      String   @unique @db.Citext
+  hash       String
+  salt       String
+  givenName  String?  @map("given_name")
+  familyName String?  @map("family_name")
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
 
   @@map("users")
 }
