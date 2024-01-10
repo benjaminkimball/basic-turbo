@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@basic-tubro/api",
+  "name": "@basic-turbo/api",
   "version": "0.0.0",
   "description": "",
   "main": "dist/main.js",

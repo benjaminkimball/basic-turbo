@@ -1,4 +1,4 @@
-# basic-tubro
+# basic-turbo
 
 A cloneable template for bootstrapping a Turborepo with a GraphQL server and Next.js app.
 
