@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./bin/signature
+echo
 echo "============================================================"
 echo "> Stopping background services..."
 echo

@@ -7,7 +7,7 @@ POSTGRES_PASS=postgres
 CURRENT_DIR=`basename $(pwd)`
 CONTAINER=`docker ps --filter name="$CURRENT_DIR-postgres" --format "{{.Names}}"`
 
-source ./bin/signature
+echo
 echo "============================================================="
 echo "> Connecting to $CONTAINER..."
 echo

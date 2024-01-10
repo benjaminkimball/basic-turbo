@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@vril/api",
+  "name": "@basic-tubro/api",
   "version": "0.0.0",
   "description": "",
   "main": "dist/main.js",

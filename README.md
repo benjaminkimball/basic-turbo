@@ -1,4 +1,6 @@
-# vril
+# basic-tubro
+
+A cloneable template for bootstrapping a Turborepo with a GraphQL server and Next.js app.
 
 ### Developer `make` commands
 

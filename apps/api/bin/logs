@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./bin/signature
+echo
 echo "============================================================"
 echo "> Tailing background service logs..."
 echo

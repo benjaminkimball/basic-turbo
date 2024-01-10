@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./bin/signature
+echo
 echo "============================================================="
 echo "> Setting up local development environment..."
 echo
