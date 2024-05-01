@@ -1,8 +1,9 @@
-/**
- * @type {import("next").NextConfig}
- */
-module.exports = {
-  pageExtensions: ["ts", "tsx"],
+// @ts-check
+
+/** @type {import("next").NextConfig} */
+const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
 };
+
+module.exports = nextConfig;

@@ -13,7 +13,6 @@
     "format": {},
     "lint": {},
     "prepush": {},
-    "test": {},
-    "types": {}
+    "test": {}
   }
 }

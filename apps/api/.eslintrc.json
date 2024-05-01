@@ -2,7 +2,7 @@
   "root": true,
   "extends": [
     "eslint:recommended",
-    "plugin:security/recommended",
+    "plugin:security/recommended-legacy",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
